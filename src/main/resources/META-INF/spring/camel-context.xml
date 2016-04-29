@@ -19,12 +19,11 @@
   
   <redeliveryPolicyProfile id="myRedeliveryPolicy" maximumRedeliveries="2" redeliveryDelay="1000" logRetryAttempted="true" retryAttemptedLogLevel="WARN"/>
   
-  <!-- <route> -->
-  <route errorHandlerRef="test">
+   <route errorHandlerRef="test">
     <from uri="file:src/data?noop=true"/>
     <to uri="activemq:personnel.records"/>
   </route>
-  <!-- <route errorHandlerRef="test"> -->
+  
   <route>
     <from uri="activemq:personnel.records"/>
     <choice>
